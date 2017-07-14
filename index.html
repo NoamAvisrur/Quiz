@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="maincss.css" rel="stylesheet" />        
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Space Quiz</title>
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl as ctrl" ng-cloak>
+    <h1>{{ctrl.title}}</h1>
+    <main>
+        <div ng-view></div>
+        <div class="showResults" ng-show="ctrl.show">
+            <h1>results:</h1>
+            <span class="score">Your Score: <span>{{ctrl.score}}</span></span>
+            <span>you answersed {{ctrl.currectAnswersLength}} out of {{ctrl.answersLength}} currect answers</span>
+            <a href="#!1" class="star_quiz_button" ng-click="ctrl.resetQuiz()">try again</a>
+        </div>    
+        <p ng-hide="ctrl.checkArr">please answer all the questions before submit</p>
+    </main>    
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/main.js"></script>
+<script src="js/config_routes.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/ServiceData.js"></script>
+</body>
+</html>
