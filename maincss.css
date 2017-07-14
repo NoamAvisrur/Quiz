@@ -25,7 +25,7 @@ main{
     border: 1px solid #eee;
 }
 
-.star_quiz_button, .next_button, .submit_button{
+.star_quiz_button, .next_button, .first_next_button, .submit_button{
     text-decoration: none;
     color: #eee;
     border: 1px solid #eee;
@@ -34,10 +34,19 @@ main{
     border-radius: 3px;
     display: block;
     width: 120px;
+    margin: 2rem 5px 0 5px;
+}
+.star_quiz_button, .first_next_button{
     margin: auto;
     margin-top: 2rem;
 }
 
+.submit_button{
+   background-color: chocolate; 
+   width: 138px;
+   font-size: 1rem;
+   cursor: pointer;
+}
 .star_quiz_button:hover, .next_button:hover, .submit_button:hover{
     font-color: #fff;
     background-color: #6c8f25;
@@ -94,18 +103,25 @@ main{
     color: yellowgreen;
 }
 
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
 /*------------------ media queries --------------------*/
 
 @media screen and (max-width:550px) {
     main{
         width: 90%;
     }
-    .star_quiz_button, .next_button, .submit_button {
-        font-size: 1.5rem;
-        width: 170px;
+    .star_quiz_button, .next_button, .submit_button, .first_next_button {
+        width: 130px;
         padding: 1rem;
         box-sizing: border-box;
     }    
+    .star_quiz_button{
+        width: 160px;
+    }
 }
 @media screen and (min-width: 550px) and (max-width: 800px) {
     main{
