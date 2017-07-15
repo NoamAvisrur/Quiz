@@ -113,6 +113,9 @@ main{
 @media screen and (max-width:550px) {
     main{
         width: 90%;
+        min-height: 80vh;
+        padding: 0.5rem;
+        box-sizing: border-box;
     }
     .star_quiz_button, .next_button, .submit_button, .first_next_button {
         width: 130px;
