@@ -24,8 +24,6 @@ app.controller('mainCtrl', function(DataService){
     
     this.getValue = function($index){
         DataService.answers[this.i] = this.answers[this.i];
-        console.log(DataService.answers);
-        console.log(this.answers);
     }
     
     this.submit = function(){
@@ -35,18 +33,13 @@ app.controller('mainCtrl', function(DataService){
     
     this.calculate = function(){
         var pointsPerQ = 100/this.data.length;
-        console.log(pointsPerQ);
         this.score = 0;
          for (var i = 0; i < this.data.length; i++){
-             console.log (this.data[i].A);
-             console.log(DataService.answers[i]);
              if(this.data[i].A === DataService.answers[i]){
                  this.score += pointsPerQ;
                  this.rightAnswers.push(DataService.answers[i]);
              }     
         }
-        console.log(this.score);
-        console.log(this.rightAnswers);
     }
     
     this.rightAnswers = [];

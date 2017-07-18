@@ -83,6 +83,10 @@ main{
     color: yellowgreen;
 }
 
+label{
+   margin-bottom: 0.5rem;
+}
+
 
 /*------------------ media queries --------------------*/
 
