@@ -87,7 +87,18 @@ label{
    margin-bottom: 0.5rem;
 }
 
+#progressBar{
+    width: 0%;
+    display: block;
+    height: 10px;
+    background-color: yellowgreen;
+    border-radius: 5px 0 0 0;
+    transition: width 1s;
+}
 
+.notice{
+    color: yellowgreen;
+}
 /*------------------ media queries --------------------*/
 
 @media screen and (max-width:550px) {

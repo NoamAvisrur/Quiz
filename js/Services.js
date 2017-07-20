@@ -1,3 +1,19 @@
+app.service('ProgressBar', function() {
+    this.startBar = function(){
+        var bar = document.querySelector('#progressBar');   
+        var width = 1;
+        var id = setInterval(frame, 450);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                bar.style.width = width + '%'; 
+            }
+        }
+    }
+});
+
 app.service('DataService', function() {
     this.data = [
                     {

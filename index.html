@@ -17,9 +17,11 @@
     <main>
         <div class="msg">
             <p class="wellcome">Wellcome to {{ctrl.title}}</p>
+            <p class="notice">you have 45 seconds to complete the quiz</p>
             <button class="star_quiz_button" ng-click="ctrl.startQuiz()">Start Quiz</button>
         </div>   
         <div ng-show="ctrl.show">
+            <span id="progressBar"></span>
             <span class="question_no">{{ctrl.i + 1}}</span>
             <p class="the_question">{{ctrl.data[ctrl.i].Q}}</p>
             <div class="answers">
@@ -31,10 +33,11 @@
             <button ng-click="ctrl.nav('next')" ng-hide="ctrl.i === ctrl.data.length-1" class="next_button">next  &#9658;</button>
             <button ng-click="ctrl.submit()" ng-show="ctrl.i === ctrl.data.length-1" class="submit_button">submit</button>            
         </div>
-        <result-component score="ctrl.score" rightanswers="ctrl.rightAnswers" answers="ctrl.data"></result-component>   
+        <result-component score="ctrl.score" rightanswers="ctrl.rightAnswers" answers="ctrl.data" points="ctrl.points"></result-component>   
     </main>    
 <script src="js/angular.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/ServiceData.js"></script>
+<script src="js/Component.js"></script>
+<script src="js/Services.js"></script>
 </body>
 </html>
